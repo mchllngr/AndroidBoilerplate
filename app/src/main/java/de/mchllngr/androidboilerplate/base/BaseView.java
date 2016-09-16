@@ -15,6 +15,8 @@ public interface BaseView extends MvpView {
      * Allows the {@link BasePresenter} to get the associated Activity.
      *
      * @return {@link FragmentActivity}
+     *
+     * @see BasePresenter
      */
     FragmentActivity getActivity();
 }

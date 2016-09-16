@@ -44,22 +44,12 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter> implemen
         context.startActivity(starter);
     }
 
-    /**
-     * Creates the {@link MainPresenter} for this {@link android.app.Activity}.
-     *
-     * @return {@link MainPresenter} for this {@link android.app.Activity}
-     */
     @NonNull
     @Override
     public MainPresenter createPresenter() {
         return new MainPresenter();
     }
 
-    /**
-     * Initialises the {@link android.app.Activity}.
-     *
-     * @param savedInstanceState {@link Bundle}
-     */
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,11 +66,6 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter> implemen
         });
     }
 
-    /**
-     * Gets the instance of the {@link android.app.Activity}.
-     *
-     * @return the {@link android.app.Activity}
-     */
     @NonNull
     @Override
     public FragmentActivity getActivity() {

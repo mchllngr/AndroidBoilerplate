@@ -14,9 +14,7 @@ import timber.log.Timber;
  */
 public class BaseApp extends Application {
 
-    /**
-     * Initialises the {@link android.app.Application}.
-     */
+    @Override
     public void onCreate() {
         super.onCreate();
 

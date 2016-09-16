@@ -16,12 +16,6 @@ public class ReleaseTree extends Timber.Tree {
      */
     private static final int MAX_LOG_LENGTH = 4000;
 
-    /**
-     * Checks if a message should be printed decided by priority.
-     *
-     * @param priority priority of a message
-     * @return true if priority should be printed, false otherwise
-     */
     @Override
     protected boolean isLoggable(int priority) {
         // only log ERROR, WTF
@@ -31,14 +25,6 @@ public class ReleaseTree extends Timber.Tree {
                 priority == Log.INFO);
     }
 
-    /**
-     * Prints a message to the {@link Log}.
-     *
-     * @param priority priority of a message
-     * @param tag      tag to print
-     * @param message  message to print
-     * @param t        {@link Throwable}
-     */
     @Override
     protected void log(int priority, String tag, String message, Throwable t) {
         if (isLoggable(priority)) {
