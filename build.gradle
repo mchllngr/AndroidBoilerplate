@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0-rc1'
+        classpath "com.neenbedankt.gradle.plugins:android-apt:1.8"
+        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.5"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    // Tools and sdk
+    compileSdkVersion = 24
+    buildToolsVersion = "24.0.2"
+    minSdkVersion = 16
+    targetSdkVersion = 24
+
+    // Version
+    majorVersion = 0
+    minorVersion = 1
+    bugfixVersion = 0
+    versionCode = majorVersion * 1000000 + minorVersion * 1000 + bugfixVersion
+    versionName = "$majorVersion.$minorVersion.$bugfixVersion"
+
+    // App dependencies
+    supportLibraryVersion = "24.2.1"
+    mosbyVersion = "2.0.1"
+    butterknifeVersion = "8.4.0"
+    dagger2Version = "2.7"
+    timberVersion = "4.1.2"
+    stethoVersion = "1.4.1"
+    windfishVersion = "1.2"
+    debugdrawerVersion = "0.7.0"
+    scalpelVersion = "1.1.2"
+    taktVersion = "1.0.3"
+    jUnitVersion = "4.12"
+    mockitoVersion = "2.1.0-RC.1"
+    espressoVersion = "2.2.2"
+}
