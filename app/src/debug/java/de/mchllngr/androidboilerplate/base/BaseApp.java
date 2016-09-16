@@ -15,7 +15,7 @@ import timber.log.Timber;
 public class BaseApp extends Application {
 
     /**
-     * Instances the {@link android.app.Application}.
+     * Initialises the {@link android.app.Application}.
      */
     public void onCreate() {
         super.onCreate();

@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter> implemen
     }
 
     /**
-     * Instances the {@link android.app.Activity}.
+     * Initialises the {@link android.app.Activity}.
      *
      * @param savedInstanceState {@link Bundle}
      */
