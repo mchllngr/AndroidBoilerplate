@@ -18,7 +18,7 @@ import de.mchllngr.androidboilerplate.base.BaseActivity;
 import timber.log.Timber;
 
 /**
- * {@link android.app.Activity} for handling the Navigation and the events from it.
+ * {@link android.app.Activity} for (TODO) doing something.
  *
  * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
