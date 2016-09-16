@@ -50,4 +50,14 @@ public abstract class BaseActivity<V extends MvpView, P extends MvpBasePresenter
         if (getSupportActionBar() != null)
             getSupportActionBar().setTitle(titleResId);
     }
+
+    /**
+     * Sets the visibility of the home-button (up-arrow).
+     */
+    public void setShowHomeButton(boolean showHomeButton) {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(showHomeButton);
+            getSupportActionBar().setDisplayShowHomeEnabled(showHomeButton);
+        }
+    }
 }
