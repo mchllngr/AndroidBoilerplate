@@ -91,10 +91,12 @@ public class DebugDrawerHelper {
      */
     private SpinnerAction getNightModeActionsModule() {
         return new SpinnerAction<>(
-                Arrays.asList(debugNightModeSelect,
+                Arrays.asList(
+                        debugNightModeSelect,
                         debugNightModeYes,
                         debugNightModeNo,
-                        debugNightModeAuto),
+                        debugNightModeAuto
+                ),
                 new SpinnerAction.OnItemSelectedListener<String>() {
                     @Override
                     public void onItemSelected(@NonNull String value) {
