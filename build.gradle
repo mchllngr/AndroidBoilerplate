@@ -3,9 +3,8 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0-rc1'
-        classpath "com.neenbedankt.gradle.plugins:android-apt:1.8"
-        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.5"
+        classpath "com.android.tools.build:gradle:2.2.0"
+        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.1"
     }
 }
 
@@ -24,30 +23,30 @@ task clean(type: Delete) {
 
 ext {
     // Tools and sdk
-    compileSdkVersion = 24
-    buildToolsVersion = "24.0.2"
-    minSdkVersion = 16
-    targetSdkVersion = 24
+    COMPILE_SDK_VERSION = 24
+    BUILD_TOOLS_VERSION = "24.0.2"
+    MIN_SDK_VERSION = 16
+    TARGET_SDK_VERSION = 24
 
     // Version
-    majorVersion = 0
-    minorVersion = 1
-    bugfixVersion = 0
-    versionCode = majorVersion * 1000000 + minorVersion * 1000 + bugfixVersion
-    versionName = "$majorVersion.$minorVersion.$bugfixVersion"
+    MAJOR_VERSION = 0
+    MINOR_VERSION = 1
+    BUGFIX_VERSION = 0
+    VERSIONCODE = MAJOR_VERSION * 1000000 + MINOR_VERSION * 1000 + BUGFIX_VERSION
+    VERSIONAME = "$MAJOR_VERSION.$MINOR_VERSION.$BUGFIX_VERSION"
 
     // App dependencies
-    supportLibraryVersion = "24.2.1"
-    mosbyVersion = "2.0.1"
-    butterknifeVersion = "8.4.0"
-    dagger2Version = "2.7"
-    timberVersion = "4.1.2"
-    stethoVersion = "1.4.1"
-    windfishVersion = "1.2"
-    debugdrawerVersion = "0.7.0"
-    scalpelVersion = "1.1.2"
-    taktVersion = "1.0.3"
-    jUnitVersion = "4.12"
-    mockitoVersion = "2.1.0-RC.1"
-    espressoVersion = "2.2.2"
+    SUPPORT_VERSION = "24.2.1"
+    MOSBY_VERSION = "2.0.1"
+    BUTTERKNIFE_VERSION = "8.4.0"
+    DAGGER2_VERSION = "2.7"
+    TIMBER_VERSION = "4.1.2"
+    STETHO_VERSION = "1.4.1"
+    WINDFISH_VERSION = "1.2"
+    DEBUGDRAWER_VERSION = "0.7.0"
+    SCALPEL_VERSION = "1.1.2"
+    TAKT_VERSION = "1.0.3"
+    JUNIT_VERSION = "4.12"
+    MOCKITO_VERSION = "2.1.0-RC.1"
+    ESPRESSO_VERSION = "2.2.2"
 }

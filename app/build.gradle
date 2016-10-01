@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.getkeepsafe.dexcount'
 
 def keystorePropertiesFile = rootProject.file("keystore.properties");
@@ -7,8 +6,8 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.COMPILE_SDK_VERSION
+    buildToolsVersion rootProject.ext.BUILD_TOOLS_VERSION
 
     dexOptions {
         maxProcessCount 4
@@ -17,10 +16,10 @@ android {
 
     defaultConfig {
         applicationId "de.mchllngr.androidboilerplate"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
+        minSdkVersion rootProject.ext.MIN_SDK_VERSION
+        targetSdkVersion rootProject.ext.TARGET_SDK_VERSION
+        versionCode rootProject.ext.VERSIONCODE
+        versionName rootProject.ext.VERSIONAME
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -63,35 +62,35 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.SUPPORT_VERSION"
+    compile "com.android.support:design:$rootProject.ext.SUPPORT_VERSION"
 
-    compile "com.hannesdorfmann.mosby:mvp:$rootProject.ext.mosbyVersion"
+    compile "com.hannesdorfmann.mosby:mvp:$rootProject.ext.MOSBY_VERSION"
 
-    compile "com.jakewharton:butterknife:$rootProject.ext.butterknifeVersion"
-    apt "com.jakewharton:butterknife-compiler:$rootProject.ext.butterknifeVersion"
+    compile "com.jakewharton:butterknife:$rootProject.ext.BUTTERKNIFE_VERSION"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.BUTTERKNIFE_VERSION"
 
-    compile "com.google.dagger:dagger:$rootProject.ext.dagger2Version"
-    apt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2Version"
+    compile "com.google.dagger:dagger:$rootProject.ext.DAGGER2_VERSION"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.ext.DAGGER2_VERSION"
 
-    compile "com.jakewharton.timber:timber:$rootProject.ext.timberVersion"
+    compile "com.jakewharton.timber:timber:$rootProject.ext.TIMBER_VERSION"
 
-    debugCompile "com.facebook.stetho:stetho:$rootProject.ext.stethoVersion"
+    debugCompile "com.facebook.stetho:stetho:$rootProject.ext.STETHO_VERSION"
 
-    debugCompile "de.hannesstruss.windfish:windfish-library:$rootProject.ext.windfishVersion"
+    debugCompile "de.hannesstruss.windfish:windfish-library:$rootProject.ext.WINDFISH_VERSION"
 
-    debugCompile "io.palaima.debugdrawer:debugdrawer:$rootProject.ext.debugdrawerVersion"
-    debugCompile "io.palaima.debugdrawer:debugdrawer-commons:$rootProject.ext.debugdrawerVersion"
-    debugCompile "io.palaima.debugdrawer:debugdrawer-actions:$rootProject.ext.debugdrawerVersion"
-    debugCompile "io.palaima.debugdrawer:debugdrawer-scalpel:$rootProject.ext.debugdrawerVersion"
-    debugCompile "io.palaima.debugdrawer:debugdrawer-fps:$rootProject.ext.debugdrawerVersion"
+    debugCompile "io.palaima.debugdrawer:debugdrawer:$rootProject.ext.DEBUGDRAWER_VERSION"
+    debugCompile "io.palaima.debugdrawer:debugdrawer-commons:$rootProject.ext.DEBUGDRAWER_VERSION"
+    debugCompile "io.palaima.debugdrawer:debugdrawer-actions:$rootProject.ext.DEBUGDRAWER_VERSION"
+    debugCompile "io.palaima.debugdrawer:debugdrawer-scalpel:$rootProject.ext.DEBUGDRAWER_VERSION"
+    debugCompile "io.palaima.debugdrawer:debugdrawer-fps:$rootProject.ext.DEBUGDRAWER_VERSION"
     // Used by DebugDrawer
-    debugCompile "com.jakewharton.scalpel:scalpel:$rootProject.ext.scalpelVersion"
-    debugCompile "jp.wasabeef:takt:$rootProject.ext.taktVersion"
+    debugCompile "com.jakewharton.scalpel:scalpel:$rootProject.ext.SCALPEL_VERSION"
+    debugCompile "jp.wasabeef:takt:$rootProject.ext.TAKT_VERSION"
 
-    testCompile "junit:junit:$rootProject.ext.jUnitVersion"
-    testCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
-    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoVersion", {
+    testCompile "junit:junit:$rootProject.ext.JUNIT_VERSION"
+    testCompile "org.mockito:mockito-core:$rootProject.ext.MOCKITO_VERSION"
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.ext.ESPRESSO_VERSION", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
