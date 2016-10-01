@@ -52,6 +52,11 @@ public class DebugDrawerHelper {
     @BindString(R.string.debug_night_mode_auto)
     String debugNightModeAuto;
     /**
+     * {@link String} used for initialising the NightMode-{@link ActionsModule}.
+     */
+    @BindString(R.string.debug_night_mode_follow_system)
+    String debugNightModeFollowSystem;
+    /**
      * {@link DebugDrawer} reference to use.
      */
     private DebugDrawer debugDrawer;
@@ -95,17 +100,20 @@ public class DebugDrawerHelper {
                         debugNightModeSelect,
                         debugNightModeYes,
                         debugNightModeNo,
-                        debugNightModeAuto
+                        debugNightModeAuto,
+                        debugNightModeFollowSystem
                 ),
                 new SpinnerAction.OnItemSelectedListener<String>() {
                     @Override
                     public void onItemSelected(@NonNull String value) {
-                        int selectedMode = AppCompatDelegate.MODE_NIGHT_AUTO;
+                        int selectedMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
 
                         if (value.equals(debugNightModeYes))
                             selectedMode = AppCompatDelegate.MODE_NIGHT_YES;
                         else if (value.equals(debugNightModeNo))
                             selectedMode = AppCompatDelegate.MODE_NIGHT_NO;
+                        else if (value.equals(debugNightModeAuto))
+                            selectedMode = AppCompatDelegate.MODE_NIGHT_AUTO;
 
                         activity.getDelegate().setLocalNightMode(selectedMode);
                         activity.recreate();

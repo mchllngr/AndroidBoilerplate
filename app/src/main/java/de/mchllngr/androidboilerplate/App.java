@@ -15,10 +15,10 @@ import de.mchllngr.androidboilerplate.injection.DaggerApplicationComponent;
 public class App extends BaseApp {
 
     /**
-     * Sets the default night mode to auto.
+     * Sets the default night mode to follow system.
      */
     static {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
     }
 
     /**
