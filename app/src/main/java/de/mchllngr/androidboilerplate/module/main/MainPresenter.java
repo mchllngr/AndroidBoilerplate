@@ -4,8 +4,6 @@ import de.mchllngr.androidboilerplate.base.BasePresenter;
 
 /**
  * {@link com.hannesdorfmann.mosby.mvp.MvpPresenter} for the {@link MainActivity}
- *
- * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
 @SuppressWarnings("ConstantConditions")
 public class MainPresenter extends BasePresenter<MainView> {

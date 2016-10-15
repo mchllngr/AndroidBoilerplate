@@ -19,8 +19,6 @@ import timber.log.Timber;
 
 /**
  * {@link android.app.Activity} for (TODO) doing something.
- *
- * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
 public class MainActivity extends BaseActivity<MainView, MainPresenter> implements MainView {
 

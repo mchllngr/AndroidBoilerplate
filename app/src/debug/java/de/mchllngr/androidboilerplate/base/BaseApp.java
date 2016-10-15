@@ -4,13 +4,10 @@ import android.app.Application;
 
 import com.facebook.stetho.Stetho;
 
-import de.hannesstruss.windfish.library.WindFish;
 import timber.log.Timber;
 
 /**
  * Base-class used for debug initializations.
- *
- * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
 public class BaseApp extends Application {
 
@@ -19,8 +16,6 @@ public class BaseApp extends Application {
         super.onCreate();
 
         Stetho.initializeWithDefaults(this);
-
-        WindFish.install(this);
 
         initTimber();
     }

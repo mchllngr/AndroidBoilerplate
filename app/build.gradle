@@ -77,8 +77,6 @@ dependencies {
 
     debugCompile "com.facebook.stetho:stetho:$rootProject.ext.STETHO_VERSION"
 
-    debugCompile "de.hannesstruss.windfish:windfish-library:$rootProject.ext.WINDFISH_VERSION"
-
     debugCompile "io.palaima.debugdrawer:debugdrawer:$rootProject.ext.DEBUGDRAWER_VERSION"
     debugCompile "io.palaima.debugdrawer:debugdrawer-commons:$rootProject.ext.DEBUGDRAWER_VERSION"
     debugCompile "io.palaima.debugdrawer:debugdrawer-actions:$rootProject.ext.DEBUGDRAWER_VERSION"

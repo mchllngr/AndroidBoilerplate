@@ -13,8 +13,6 @@ import io.palaima.debugdrawer.DebugDrawer;
 
 /**
  * BaseDebug-class used for initialization of the {@link DebugDrawer}.
- *
- * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
 public abstract class DebugBaseActivity<V extends MvpView, P extends MvpBasePresenter<V>>
         extends MvpActivity<V, P> {

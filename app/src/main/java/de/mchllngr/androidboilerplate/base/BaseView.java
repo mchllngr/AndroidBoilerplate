@@ -6,8 +6,6 @@ import com.hannesdorfmann.mosby.mvp.MvpView;
 
 /**
  * Base-interface for every view.
- *
- * @author Michael Langer <a href="https://github.com/mchllngr" target="_blank">(GitHub)</a>
  */
 public interface BaseView extends MvpView {
 

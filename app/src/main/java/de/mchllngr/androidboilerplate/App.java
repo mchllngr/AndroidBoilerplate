@@ -9,8 +9,6 @@ import de.mchllngr.androidboilerplate.injection.DaggerApplicationComponent;
 
 /**
  * {@link App} for the {@link android.app.Application}
- *
- * @author Michael Langer (<a href="https://github.com/mchllngr" target="_blank">GitHub</a>)
  */
 public class App extends BaseApp {
 

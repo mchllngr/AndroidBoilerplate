@@ -11,7 +11,6 @@ import com.hannesdorfmann.mosby.mvp.MvpView;
  *
  * @param <V> view-interface for this fragment
  * @param <P> presenter for this fragment
- * @author Michael Langer <a href="https://github.com/mchllngr" target="_blank">(GitHub)</a>
  */
 public abstract class BaseFragment<V extends MvpView, P extends MvpBasePresenter<V>>
         extends MvpFragment<V, P> {
