@@ -88,9 +88,6 @@ public class DebugDrawerHelper {
     /**
      * Returns the {@link ActionsModule} for selecting the
      * {@link android.support.v7.app.AppCompatDelegate.NightMode}
-     *
-     * @return {@link ActionsModule} for selecting the
-     * {@link android.support.v7.app.AppCompatDelegate.NightMode}
      */
     private SpinnerAction getNightModeActionsModule() {
         return new SpinnerAction<>(

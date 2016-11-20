@@ -12,7 +12,7 @@ public class MainPresenter extends BasePresenter<MainView> {
 //     * {@link Example}-class for an example for Dagger2-injection.
 //     */
 //    @Inject
-//    Example exampleDependency;
+//    Example exampleInject;
 
     @Override
     public void attachView(MainView view) {

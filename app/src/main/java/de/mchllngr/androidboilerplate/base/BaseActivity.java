@@ -38,10 +38,7 @@ public abstract class BaseActivity<V extends MvpView, P extends MvpBasePresenter
     }
 
     /**
-     * Sets the title for the {@link android.support.v7.app.ActionBar} via the
-     * given {@link StringRes}.
-     * <p>
-     * If the {@link android.support.v7.app.ActionBar} is not set yet the function does nothing.
+     * Sets the title for the {@link android.support.v7.app.ActionBar}.
      *
      * @param titleResId {@link StringRes} for the title
      */

@@ -24,8 +24,9 @@ public class BasePresenter<V extends BaseView> extends MvpBasePresenter<V> {
     @SuppressWarnings("ConstantConditions")
     protected ApplicationComponent getApplicationComponent() {
         App app;
-        if (isViewAttached() && getView().getActivity() != null &&
-                (app = (App) getView().getActivity().getApplication()) != null)
+        if (isViewAttached()
+                && getView().getActivity() != null
+                && (app = (App) getView().getActivity().getApplication()) != null)
             return app.getApplicationComponent();
 
         return null;

@@ -7,6 +7,7 @@ import dagger.Module;
  */
 @Module
 public class ApplicationModule {
+
 //    @Provides
 //    @Singleton
 //    static Example provideExample(NeededExampleDependency dependency) {

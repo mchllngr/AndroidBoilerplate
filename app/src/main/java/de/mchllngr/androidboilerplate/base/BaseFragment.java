@@ -17,11 +17,13 @@ public abstract class BaseFragment<V extends MvpView, P extends MvpBasePresenter
 
     /**
      * Sets the title for the {@link android.support.v7.app.ActionBar} in the
-     * {@link android.app.Activity} via the given {@link StringRes}.
+     * {@link android.app.Activity} via the given {@link StringRes} if the
+     * {@link android.app.Activity} is a subclass from {@link BaseActivity}.
      *
      * @param titleResId {@link StringRes} for the title
      */
-    public void setTitle(@StringRes int titleResId) {
-        ((BaseActivity) getActivity()).setActionBarTitle(titleResId);
+    public void setActionBarTitle(@StringRes int titleResId) {
+        if (getActivity() instanceof BaseActivity)
+            ((BaseActivity) getActivity()).setActionBarTitle(titleResId);
     }
 }
