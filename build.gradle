@@ -24,10 +24,10 @@ task clean(type: Delete) {
 
 ext {
     // Tools and sdk
-    COMPILE_SDK_VERSION = 24
-    BUILD_TOOLS_VERSION = "24.0.2"
+    COMPILE_SDK_VERSION = 25
+    BUILD_TOOLS_VERSION = "25.0.0"
     MIN_SDK_VERSION = 16
-    TARGET_SDK_VERSION = 24
+    TARGET_SDK_VERSION = 25
 
     // Version
     MAJOR_VERSION = 0
@@ -37,7 +37,7 @@ ext {
     VERSIONAME = "$MAJOR_VERSION.$MINOR_VERSION.$BUGFIX_VERSION"
 
     // App dependencies
-    SUPPORT_VERSION = "24.2.1"
+    SUPPORT_VERSION = "25.0.1"
     MOSBY_VERSION = "2.0.1"
     BUTTERKNIFE_VERSION = "8.4.0"
     DAGGER2_VERSION = "2.7"
@@ -47,6 +47,6 @@ ext {
     SCALPEL_VERSION = "1.1.2"
     TAKT_VERSION = "1.0.3"
     JUNIT_VERSION = "4.12"
-    MOCKITO_VERSION = "2.1.0-RC.1"
+    MOCKITO_VERSION = "2.2.22"
     ESPRESSO_VERSION = "2.2.2"
 }
