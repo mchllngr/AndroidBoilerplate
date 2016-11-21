@@ -98,21 +98,18 @@ public class DebugDrawerHelper {
                         debugNightModeAuto,
                         debugNightModeFollowSystem
                 ),
-                new SpinnerAction.OnItemSelectedListener<String>() {
-                    @Override
-                    public void onItemSelected(@NonNull String value) {
-                        int selectedMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
+                value -> {
+                    int selectedMode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM;
 
-                        if (value.equals(debugNightModeYes))
-                            selectedMode = AppCompatDelegate.MODE_NIGHT_YES;
-                        else if (value.equals(debugNightModeNo))
-                            selectedMode = AppCompatDelegate.MODE_NIGHT_NO;
-                        else if (value.equals(debugNightModeAuto))
-                            selectedMode = AppCompatDelegate.MODE_NIGHT_AUTO;
+                    if (value.equals(debugNightModeYes))
+                        selectedMode = AppCompatDelegate.MODE_NIGHT_YES;
+                    else if (value.equals(debugNightModeNo))
+                        selectedMode = AppCompatDelegate.MODE_NIGHT_NO;
+                    else if (value.equals(debugNightModeAuto))
+                        selectedMode = AppCompatDelegate.MODE_NIGHT_AUTO;
 
-                        activity.getDelegate().setLocalNightMode(selectedMode);
-                        activity.recreate();
-                    }
+                    activity.getDelegate().setLocalNightMode(selectedMode);
+                    activity.recreate();
                 }
         );
     }
