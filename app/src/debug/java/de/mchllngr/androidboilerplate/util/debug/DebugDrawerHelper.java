@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import butterknife.BindString;
@@ -12,11 +13,13 @@ import de.mchllngr.androidboilerplate.R;
 import io.palaima.debugdrawer.DebugDrawer;
 import io.palaima.debugdrawer.actions.ActionsModule;
 import io.palaima.debugdrawer.actions.SpinnerAction;
+import io.palaima.debugdrawer.base.DebugModule;
 import io.palaima.debugdrawer.commons.BuildModule;
 import io.palaima.debugdrawer.commons.DeviceModule;
 import io.palaima.debugdrawer.commons.NetworkModule;
 import io.palaima.debugdrawer.commons.SettingsModule;
 import io.palaima.debugdrawer.fps.FpsModule;
+import io.palaima.debugdrawer.location.LocationModule;
 import io.palaima.debugdrawer.scalpel.ScalpelModule;
 import jp.wasabeef.takt.Takt;
 
@@ -72,17 +75,21 @@ public class DebugDrawerHelper {
     /**
      * Initialises the {@link DebugDrawer}.
      */
-    public void initDebugDrawer() {
+    public void initDebugDrawer(boolean withLocation) {
+        ArrayList<DebugModule> modules = new ArrayList<>();
+
+        modules.add(new ActionsModule(getNightModeActionsModule()));
+        modules.add(new ScalpelModule(activity));
+        if (withLocation) modules.add(new LocationModule(activity));
+        modules.add(new NetworkModule(activity));
+        modules.add(new FpsModule(Takt.stock(activity.getApplication())));
+        modules.add(new BuildModule(activity));
+        modules.add(new DeviceModule(activity));
+        modules.add(new SettingsModule(activity));
+
         debugDrawer = new DebugDrawer.Builder(activity)
-                .modules(
-                        new ActionsModule(getNightModeActionsModule()),
-                        new NetworkModule(activity),
-                        new ScalpelModule(activity),
-                        new FpsModule(Takt.stock(activity.getApplication())),
-                        new BuildModule(activity),
-                        new DeviceModule(activity),
-                        new SettingsModule(activity)
-                ).build();
+                .modules(modules.toArray(new DebugModule[modules.size()]))
+                .build();
     }
 
     /**
