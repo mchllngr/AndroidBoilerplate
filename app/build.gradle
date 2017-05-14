@@ -64,6 +64,12 @@ android {
             events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
         }
     }
+
+    // Stop build on stopship-comment (only in release)
+    lintOptions {
+        abortOnError true
+        fatal 'StopShip'
+    }
 }
 
 dependencies {
