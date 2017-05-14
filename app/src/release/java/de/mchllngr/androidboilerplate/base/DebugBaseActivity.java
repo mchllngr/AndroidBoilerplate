@@ -1,8 +1,8 @@
 package de.mchllngr.androidboilerplate.base;
 
-import com.hannesdorfmann.mosby.mvp.MvpActivity;
-import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
-import com.hannesdorfmann.mosby.mvp.MvpView;
+import com.hannesdorfmann.mosby3.mvp.MvpActivity;
+import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 /**
  * BaseDebug-class used for debug initializations.

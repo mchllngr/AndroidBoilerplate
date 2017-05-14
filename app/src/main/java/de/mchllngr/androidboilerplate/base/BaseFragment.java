@@ -2,9 +2,9 @@ package de.mchllngr.androidboilerplate.base;
 
 import android.support.annotation.StringRes;
 
-import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
-import com.hannesdorfmann.mosby.mvp.MvpFragment;
-import com.hannesdorfmann.mosby.mvp.MvpView;
+import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpFragment;
+import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 /**
  * Base-class for work concerning every {@link android.support.v4.app.Fragment}.

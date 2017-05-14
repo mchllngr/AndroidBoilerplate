@@ -11,9 +11,9 @@ import com.canelmas.let.DeniedPermission;
 import com.canelmas.let.Let;
 import com.canelmas.let.RuntimePermissionListener;
 import com.canelmas.let.RuntimePermissionRequest;
-import com.hannesdorfmann.mosby.mvp.MvpActivity;
-import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
-import com.hannesdorfmann.mosby.mvp.MvpView;
+import com.hannesdorfmann.mosby3.mvp.MvpActivity;
+import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 import java.util.List;
 

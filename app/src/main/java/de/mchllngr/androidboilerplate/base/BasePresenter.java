@@ -2,8 +2,8 @@ package de.mchllngr.androidboilerplate.base;
 
 import android.support.annotation.Nullable;
 
-import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
-import com.hannesdorfmann.mosby.mvp.MvpPresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpBasePresenter;
+import com.hannesdorfmann.mosby3.mvp.MvpPresenter;
 
 import de.mchllngr.androidboilerplate.App;
 import de.mchllngr.androidboilerplate.injection.ApplicationComponent;

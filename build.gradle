@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0-beta1'
+        classpath 'com.android.tools.build:gradle:2.4.0-alpha7'
         classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.2"
         classpath 'me.tatarka:gradle-retrolambda:3.4.0'
         classpath 'com.canelmas.let:let-plugin:0.1.11'
@@ -26,7 +26,7 @@ task clean(type: Delete) {
 ext {
     // Tools and sdk
     COMPILE_SDK_VERSION = 25
-    BUILD_TOOLS_VERSION = "25.0.2"
+    BUILD_TOOLS_VERSION = "25.0.3"
     MIN_SDK_VERSION = 16
     TARGET_SDK_VERSION = 25
 
@@ -38,16 +38,16 @@ ext {
     VERSIONAME = "$MAJOR_VERSION.$MINOR_VERSION.$BUGFIX_VERSION"
 
     // App dependencies
-    SUPPORT_VERSION = "25.1.0"
-    MOSBY_VERSION = "2.0.1"
-    BUTTERKNIFE_VERSION = "8.4.0"
-    DAGGER2_VERSION = "2.8"
+    SUPPORT_VERSION = "25.3.1"
+    MOSBY_VERSION = "3.0.3"
+    BUTTERKNIFE_VERSION = "8.5.1"
+    DAGGER2_VERSION = "2.10"
     TIMBER_VERSION = "4.1.2"
-    STETHO_VERSION = "1.4.2"
+    STETHO_VERSION = "1.5.0"
     DEBUGDRAWER_VERSION = "0.7.0"
-    PLAY_SERVICES_LOCATION_VERSION = "10.0.1"
+    PLAY_SERVICES_LOCATION_VERSION = "10.2.4"
     SCALPEL_VERSION = "1.1.2"
-    TAKT_VERSION = "1.0.3"
+    TAKT_VERSION = "1.0.4"
     JUNIT_VERSION = "4.12"
     MOCKITO_VERSION = "2.2.22"
     ESPRESSO_VERSION = "2.2.2"

@@ -2,7 +2,7 @@ package de.mchllngr.androidboilerplate.base;
 
 import android.support.v4.app.FragmentActivity;
 
-import com.hannesdorfmann.mosby.mvp.MvpView;
+import com.hannesdorfmann.mosby3.mvp.MvpView;
 
 /**
  * Base-interface for every view.

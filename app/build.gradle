@@ -72,7 +72,7 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.SUPPORT_VERSION"
     compile "com.android.support:design:$rootProject.ext.SUPPORT_VERSION"
 
-    compile "com.hannesdorfmann.mosby:mvp:$rootProject.ext.MOSBY_VERSION"
+    compile "com.hannesdorfmann.mosby3:mvp:$rootProject.ext.MOSBY_VERSION"
 
     compile "com.jakewharton:butterknife:$rootProject.ext.BUTTERKNIFE_VERSION"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.BUTTERKNIFE_VERSION"
